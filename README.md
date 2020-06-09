@@ -4,7 +4,7 @@
 
 We introduce an advanced Russian  general  language  understanding  evaluation benchmark.
 
-Recent advances in the field of universal lan-guage models and transformers require the de-velopment of a methodology for their broad di-agnostics  and  testing  for  general  intellectualskills  -  detection  of  natural  language  inference,  commonsense reasoning,  ability to per-form  simple  logical  operations  regardless  oftext  subject  or  lexicon.   For  the  first  time,  abenchmark of nine tasks,  collected and orga-nized analogically to the SuperGLUE methodology, was developed from scratch for the Russian language.  We provide baselines,  human  level  evaluation,  an  open-source  framework  for  evaluating  models  andan overall leaderboard of transformer modelsfor the Russian language.
+Recent advances in the field of universal language models and transformers require the development of a methodology for their broad diagnostics  and  testing  for  general  intellectual skills  -  detection  of  natural  language  inference,  commonsense reasoning,  ability to perform  simple  logical  operations  regardless  of text  subject  or  lexicon.   For  the  first  time,  a benchmark of nine tasks,  collected and organized analogically to the SuperGLUE methodology, was developed from scratch for the Russian language.  We provide baselines,  human  level  evaluation,  an  open-source  framework  for  evaluating  models  andan overall leaderboard of transformer modelsfor the Russian language.
 
 ## Instructions:
 
