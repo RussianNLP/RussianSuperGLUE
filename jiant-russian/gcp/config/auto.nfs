@@ -1,0 +1,3 @@
+# Change this to the NFS server on your cluster
+jiant -rw,hard jiant:/jiant
+
