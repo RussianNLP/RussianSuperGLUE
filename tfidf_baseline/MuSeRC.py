@@ -88,10 +88,12 @@ Measures = MuSeRCMetrics
 
 
 def eval_MuSeRC(train_path, val_path, test_path, vect):
+    test_score, test_pred = eval_part_MuSeRC(test_path, vect)
     return None, {
-        "train": eval_part_MuSeRC(train_path, vect),
-        "val": eval_part_MuSeRC(val_path, vect),
-        "test": eval_part_MuSeRC(test_path, vect)
+        "train": eval_part_MuSeRC(train_path, vect)[0],
+        "val": eval_part_MuSeRC(val_path, vect)[0],
+        "test": test_score,
+        "test_pred": test_pred
     }
 
 
@@ -100,22 +102,26 @@ def eval_part_MuSeRC(path, vect):
         lines = list(reader)
     preds = []
     labels = []
+    res = []
     for row in lines:
-        pred, lbls = get_row_pred_MuSeRC(row, vect)
+        pred, lbls, res_ids = get_row_pred_MuSeRC(row, vect)
         preds.extend(pred)
         labels.extend(lbls)
-    return MuSeRC_metrics(preds, labels)
+        res.append(res_ids)
+    return MuSeRC_metrics(preds, labels), res
 
 
 def get_row_pred_MuSeRC(row, vect):
     text = vect.transform([row["passage"]["text"]])
     res = []
     labels = []
+    res_ids = {"idx": row["idx"], "passage": {"questions": []}}
     for line in row["passage"]["questions"]:
+        res_line = {"idx": line["idx"], "answers": []}
         line_answers = []
         line_labels = []
         for answ in line["answers"]:
-            line_labels.append(answ["label"])
+            line_labels.append(answ.get("label", 0))
             answ = f"{line['question']} {answ['text']}"
             line_answers.append(answ)
         cos = cosine_similarity(text, vect.transform(line_answers))
@@ -123,4 +129,7 @@ def get_row_pred_MuSeRC(row, vect):
         pred = [int(idx in pred) for idx in range(len(line["answers"]))]
         res.append(pred)
         labels.append(line_labels)
-    return res, labels
+        for answ, p in zip(line["answers"], pred):
+            res_line["answers"].append({"idx": answ["idx"], "label": p})
+        res_ids["passage"]["questions"].append(res_line)
+    return res, labels, res_ids

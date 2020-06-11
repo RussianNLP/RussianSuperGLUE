@@ -40,7 +40,7 @@ def exact_match_score(prediction, ground_truth):
 
 
 def metric_max_over_ground_truths(metric_fn, prediction, ground_truths):
-    scores_for_ground_truths = []
+    scores_for_ground_truths = [0]
     for ground_truth in ground_truths:
         score = metric_fn(prediction, ground_truth)
         scores_for_ground_truths.append(score)
@@ -54,7 +54,7 @@ def evaluate(dataset, predictions):
         prediction = prediction["label"]
         for qa in passage['qas']:
             total += 1
-            ground_truths = list(map(lambda x: x['text'], qa['answers']))
+            ground_truths = list(map(lambda x: x['text'], qa.get("answers", "")))
 
             _exact_match = metric_max_over_ground_truths(exact_match_score, prediction, ground_truths)
             if int(_exact_match) == 1:
@@ -69,10 +69,12 @@ def evaluate(dataset, predictions):
 
 
 def eval_RuCoS(train_path, val_path, test_path, vect):
+    test_pred, test_score = eval_part(test_path, vect)
     return None, {
-        "train": eval_part(train_path, vect),
-        "val": eval_part(val_path, vect),
-        "test": eval_part(test_path, vect)
+        "train": eval_part(train_path, vect)[0],
+        "val": eval_part(val_path, vect)[0],
+        "test": test_score,
+        "test_pred": test_pred
     }
 
 
@@ -86,7 +88,7 @@ def eval_part(path, vect):
             "idx": row["idx"],
             "label": pred
         })
-    return evaluate(lines, preds)
+    return evaluate(lines, preds), preds
 
 
 def get_row_pred(row, vect):
