@@ -69,7 +69,7 @@ def evaluate(dataset, predictions):
 
 
 def eval_RuCoS(train_path, val_path, test_path, vect):
-    test_pred, test_score = eval_part(test_path, vect)
+    test_score, test_pred = eval_part(test_path, vect)
     return None, {
         "train": eval_part(train_path, vect)[0],
         "val": eval_part(val_path, vect)[0],
@@ -104,4 +104,4 @@ def get_row_pred(row, vect):
         cos = cosine_similarity(text, vect.transform(line_candidates))
         pred = np.array(words)[cos.argsort()[0][-1]]
         res.append(pred)
-    return " ".join(res).lower()
+    return " ".join(res)

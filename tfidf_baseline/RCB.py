@@ -41,5 +41,5 @@ def eval_RCB(train_path, val_path, test_path, vect):
         "train": clf.score(*train),
         "val": clf.score(*val),
         "test": test_score,
-        "test_pred": [{"idx": idx, "label": label} for idx, label in zip(ids, test_pred)]
+        "test_pred": [{"idx": idx, "label": str(label)} for idx, label in zip(ids, test_pred)]
     }
