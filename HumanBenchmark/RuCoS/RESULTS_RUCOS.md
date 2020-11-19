@@ -4,21 +4,18 @@
 
 train: 
 ```
-	passages:  72193
-	queries:  72193
+	passages/queries: 72193
 ```
 
 val: 
 
 ```
-	passages:  4370
-	queries:  4370
+	passages/queries: 7577
 ```
 
 test: 
 ```
-	passages:  4147
-	queries:  4147
+	passages/queries:  7257
 ```
 
 Overlap 3-5; control accuracy >= 0.5

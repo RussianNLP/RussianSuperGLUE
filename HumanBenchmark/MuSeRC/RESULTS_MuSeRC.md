@@ -6,8 +6,8 @@ Version1:
 Train: 
 ```
 	Texts:  500
-	Questions:  2570
-	Answers:  10315
+	Questions:  2896
+	Answers:  11949
 ```
 
 Val: 

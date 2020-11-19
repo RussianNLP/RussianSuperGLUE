@@ -1,28 +1,31 @@
 # DaNetQA
 
-train - 391
+train - 1749
 
-val - 294
+val - 821
 
-test - 294
+test - 805
 
 
-Overlap 5.
+Overlap 5
 
-8 tolokers were excluded
+
+Bad users (0.5 treshold):
+
+5 deleted
 
 Human benchmark on test:
 
 ```
               precision    recall  f1-score   support
 
-                  0.00      0.00      0.00        10
-      false       0.70      0.89      0.78        54
-       true       0.95      0.92      0.94       184
 
-accuracy                               0.88       248
-macro avg          0.55      0.60      0.57       248
-weighted avg       0.86      0.88      0.86       248
+       false       0.83      0.82      0.82       163
+        true       0.94      0.95      0.94       521
+
+    accuracy                           0.92       684
+   macro avg       0.88      0.88      0.88       684
+weighted avg       0.91      0.92      0.92       684
 ```
 
-Accuracy: 0.879
+Accuracy: 0.9152
