@@ -3,10 +3,9 @@ jsondiff==1.2.0
 numpy==1.18.5
 pyhocon==0.3.55
 python-Levenshtein==0.12.0
-tensorboardX = 2.0
+tensorboardX==2.0
 torch==1.5.0+cu101
 torchsummary==1.5.1
 torchtext==0.3.1
 torchvision==0.6.0+cu101
 transformers==2.11.0
-
