@@ -37,15 +37,15 @@ Recent advances in the field of universal language models and transformers requi
 
 You can see our documentation at [diagnostics description](https://russiansuperglue.com/datasets/)
 
- - LiDiRus [link](https://russiansuperglue.com/tasks/task_info/LiDiRus)
- - RCB [link](https://russiansuperglue.com/tasks/task_info/RCB)
- - PARus [link](https://russiansuperglue.com/tasks/task_info/PARus)
- - MuSeRC [link](https://russiansuperglue.com/tasks/task_info/MuSeRC)
- - TERRa [link](https://russiansuperglue.com/tasks/task_info/TERRa)
- - RUSSE [link](https://russiansuperglue.com/tasks/task_info/RUSSE)
- - RWSD [link](https://russiansuperglue.com/tasks/task_info/RWSD)
- - DaNetQA [link](https://russiansuperglue.com/tasks/task_info/DaNetQA)
- - RuCoS [link](https://russiansuperglue.com/tasks/task_info/RuCoS)
+ - [LiDiRus](https://russiansuperglue.com/tasks/task_info/LiDiRus)
+ - [RCB](https://russiansuperglue.com/tasks/task_info/RCB)
+ - [PARus](https://russiansuperglue.com/tasks/task_info/PARus)
+ - [MuSeRC](https://russiansuperglue.com/tasks/task_info/MuSeRC)
+ - [TERRa](https://russiansuperglue.com/tasks/task_info/TERRa)
+ - [RUSSE](https://russiansuperglue.com/tasks/task_info/RUSSE)
+ - [RWSD](https://russiansuperglue.com/tasks/task_info/RWSD)
+ - [DaNetQA](https://russiansuperglue.com/tasks/task_info/DaNetQA)
+ - [RuCoS](https://russiansuperglue.com/tasks/task_info/RuCoS)
 
 ## Cite us:
 
