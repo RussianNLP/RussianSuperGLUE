@@ -49,14 +49,30 @@ You can see our documentation at [diagnostics description](https://russiansuperg
 
 ## Cite us:
 
-Read our [article](https://www.aclweb.org/anthology/2020.emnlp-main.381.pdf)
+Read our [article](https://aclanthology.org/2020.emnlp-main.381/)
 
 Please, cite us this way:
 ```
-@article{shavrina2020russiansuperglue,
-                  title={RussianSuperGLUE: A Russian Language Understanding Evaluation Benchmark},
-                  author={Shavrina, Tatiana and Fenogenova, Alena and Emelyanov, Anton and Shevelev, Denis and Artemova, Ekaterina and Malykh, Valentin and Mikhailov, Vladislav and Tikhonova, Maria and Chertok, Andrey and Evlampiev, Andrey},
-                  journal={arXiv preprint arXiv:2010.15925},
-                  year={2020}
-                  }
+@inproceedings{shavrina-etal-2020-russiansuperglue,
+    title = "{R}ussian{S}uper{GLUE}: A {R}ussian Language Understanding Evaluation Benchmark",
+    author = "Shavrina, Tatiana  and
+      Fenogenova, Alena  and
+      Anton, Emelyanov  and
+      Shevelev, Denis  and
+      Artemova, Ekaterina  and
+      Malykh, Valentin  and
+      Mikhailov, Vladislav  and
+      Tikhonova, Maria  and
+      Chertok, Andrey  and
+      Evlampiev, Andrey",
+    booktitle = "Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+    month = nov,
+    year = "2020",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2020.emnlp-main.381",
+    doi = "10.18653/v1/2020.emnlp-main.381",
+    pages = "4717--4726",
+    abstract = "In this paper, we introduce an advanced Russian general language understanding evaluation benchmark {--} Russian SuperGLUE. Recent advances in the field of universal language models and transformers require the development of a methodology for their broad diagnostics and testing for general intellectual skills - detection of natural language inference, commonsense reasoning, ability to perform simple logical operations regardless of text subject or lexicon. For the first time, a benchmark of nine tasks, collected and organized analogically to the SuperGLUE methodology, was developed from scratch for the Russian language. We also provide baselines, human level evaluation, open-source framework for evaluating models, and an overall leaderboard of transformer models for the Russian language. Besides, we present the first results of comparing multilingual models in the translated diagnostic test set and offer the first steps to further expanding or assessing State-of-the-art models independently of language.",
+}
 ```
