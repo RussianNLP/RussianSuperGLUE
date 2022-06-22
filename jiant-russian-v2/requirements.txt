@@ -1,6 +1,6 @@
 allennlp==0.9.0
 jsondiff==1.2.0
-numpy==1.18.5
+numpy==1.22.0
 pyhocon==0.3.55
 python-Levenshtein==0.12.0
 tensorboardX==2.0

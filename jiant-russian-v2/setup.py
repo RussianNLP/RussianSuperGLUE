@@ -57,7 +57,7 @@ setuptools.setup(
     ],
     install_requires=[
         "torch==1.0.*",
-        "numpy==1.14.5",
+        "numpy==1.22.0",
         "pandas==0.23.0",
         "allennlp==0.8.4",
         "jsondiff",
